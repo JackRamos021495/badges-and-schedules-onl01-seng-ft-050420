@@ -22,10 +22,9 @@ end
 end
 
 def printer(order)
-badge_assignments =[]
 order_number = 1
   order.each do |name|
-    badge_assignments << batch_badge_creator(name)
+     puts batch_badge_creator(name) + assign_rooms(name)
   end
  return badge_assignments
 end
