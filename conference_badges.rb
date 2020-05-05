@@ -21,8 +21,13 @@ end
   return room_assignment
 end
 
-def printer
-
+def printer(order)
+badge_assignments =[]
+order_number = 1
+  order.each do |name|
+    badge_assignments << batch_badge_creator(name)
+  end
+ return badge_assignments
 end
 
 =begin def assign_rooms(room)
